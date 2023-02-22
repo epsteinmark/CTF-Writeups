@@ -10,10 +10,10 @@ a Dockerfile was provided
 529 solves / 138 points
 
 ## Solution
-# int main()
+### int main()
 Upon downloading the file gatekeep.c, I opened it and inspected the main function. I immediately saw the command `setbuf(stdout, NULL);` I looked up the command and through [Tutorials Point](https://www.tutorialspoint.com/c_standard_library/c_function_setbuf.htm) which revealed that the stream of stdout is null. That clearly implied that we needed a buffer overflow of some kind, so I continued searching with that in mind. The main function then calls the function check() so I move to that function
 
-# int check()
+### int check()
 Check immediately declares three variables:
 ```
 char input[15];
